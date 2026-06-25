@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kanban Board</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>Kanban Board</h1>
+    <button id="openModalBtn" class="add-task-btn">+</button>
+  </header>
+
+  <main class="board">
+    <section class="column" data-status="TO_DO">
+      <h2>To Do</h2>
+      <div class="task-list"></div>
+    </section>
+    <section class="column" data-status="IN_PROGRESS">
+      <h2>In Progress</h2>
+      <div class="task-list"></div>
+    </section>
+    <section class="column" data-status="PENDING">
+      <h2>Pending</h2>
+      <div class="task-list"></div>
+    </section>
+    <section class="column" data-status="VERIFICATION">
+      <h2>Verification</h2>
+      <div class="task-list"></div>
+    </section>
+    <section class="column" data-status="COMPLETED">
+      <h2>Completed</h2>
+      <div class="task-list"></div>
+    </section>
+  </main>
+
+  <div id="taskModal" class="modal hidden">
+    <div class="modal-content">
+      <h3>Create Task</h3>
+      <form id="taskForm">
+        <label>Title
+          <input type="text" id="title" required />
+        </label>
+        <label>Description
+          <textarea id="description"></textarea>
+        </label>
+        <div class="modal-actions">
+          <button type="submit">Save</button>
+          <button type="button" id="closeModalBtn">Close</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
