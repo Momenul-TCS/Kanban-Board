@@ -18,16 +18,6 @@ A simple 3-tier Kanban board application with:
 
 Create or update `.env` with:
 
-```env
-POSTGRES_DB=kanban_db
-POSTGRES_USER=postgres
-POSTGRES_PASSWORD=password
-DB_HOST=db
-DB_PORT=5432
-DB_USER=postgres
-DB_PASSWORD=password
-```
-
 ## Run with Docker Compose
 
 ```bash
