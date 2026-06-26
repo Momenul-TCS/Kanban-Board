@@ -24,10 +24,8 @@ public class TaskService {
         task.setTitle(title);
         task.setDescription(description);
         task.setStatus("TO_DO");
-
-        Task savedTask = taskRepository.save(task);
-        savedTask.setTaskNo("KANBAN-" + savedTask.getId());
-        return taskRepository.save(savedTask);
+        task.setTaskNo("KANBAN-" + (taskRepository.count() + 1));
+        return taskRepository.save(task);
     }
 
     public Task updateStatus(Long id, String status) {
